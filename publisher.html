@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>MQTT Publisher</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+      <script src="publisher.js" type="text/javascript"></script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <h1 id="Main_heading"><b>No Security MQTT Publisher</b></h1><br><br>
+         <form id="publish-information-form">
+            <b>Hostname or IP Address:</b> 
+            <input id="host" type="text" name="host" placeholder="broker address">
+            <b>Port Number:</b>
+            <input id="port" type="text" name="port" value="8080"><br>
+            <b>Publish Topic</b>
+            <input id="topic_p" type="text" name="topic_p" placeholder="Publish topic"><br>
+            <b>Message:</b>
+            <input id="Message" type="text" name="message" placeholder="Message"><br>
+            <input type="button" onclick="publishMessage()" value="Publish">
+         </form>
+         <div id="messages"></div>
+      </div>
+   </body>
+</html>
